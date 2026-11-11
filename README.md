@@ -20,7 +20,7 @@ Monitoring several securities requires collecting prices, checking market condit
 
 ## Workflow at a glance
 
-![n8n workflow overview](images/workflow-overview.png)
+![n8n workflow overview](workflow-overview.png)
 
 1. Scheduled or manual trigger initiates a market-monitoring cycle.
 2. Market status and configured tickers are read; quotes and indicators are fetched.
@@ -28,18 +28,18 @@ Monitoring several securities requires collecting prices, checking market condit
 4. Qualifying cases move through research, 15-minute RSI/divergence calculations, and AI analysis.
 5. Results are formatted for Telegram notification.
 
-See [architecture](docs/ARCHITECTURE.md), [product requirements](docs/PRODUCT_REQUIREMENTS.md), [agent design](docs/AGENT_DESIGN.md), and [validation](docs/VALIDATION_AND_SAFETY.md).
+See [architecture](ARCHITECTURE.md), [product requirements](PRODUCT_REQUIREMENTS.md), [agent design](AGENT_DESIGN.md), and [validation](VALIDATION_AND_SAFETY.md).
 
 ## Portfolio artefacts
 
 | Artefact | Purpose |
 |---|---|
-| [Product requirements](docs/PRODUCT_REQUIREMENTS.md) | Problem, users, scope, acceptance criteria |
-| [Architecture](docs/ARCHITECTURE.md) | System boundaries and data flow |
-| [AI-assisted analysis](docs/AGENT_DESIGN.md) | Research and analysis responsibilities |
-| [Validation and safety](docs/VALIDATION_AND_SAFETY.md) | Data quality, human oversight, testing |
-| [Roadmap](docs/ROADMAP.md) | Current evidence vs proposed improvements |
-| [Workflow structure](workflow/workflow-structure.json) | Safe, non-importable structural overview of nodes and connections |
+| [Product requirements](PRODUCT_REQUIREMENTS.md) | Problem, users, scope, acceptance criteria |
+| [Architecture](ARCHITECTURE.md) | System boundaries and data flow |
+| [AI-assisted analysis](AGENT_DESIGN.md) | Research and analysis responsibilities |
+| [Validation and safety](VALIDATION_AND_SAFETY.md) | Data quality, human oversight, testing |
+| [Roadmap](ROADMAP.md) | Current evidence vs proposed improvements |
+| [Workflow structure](workflow-structure.json) | Safe, non-importable structural overview of nodes and connections |
 
 ## Privacy and reproducibility
 
