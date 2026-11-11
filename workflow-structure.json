@@ -1,0 +1,384 @@
+{
+  "note": "Non-importable structural overview. No credentials, code, parameters or IDs.",
+  "node_count": 49,
+  "nodes": [
+    {
+      "label": "Get row(s)",
+      "type": "dataTable"
+    },
+    {
+      "label": "If",
+      "type": "if"
+    },
+    {
+      "label": "Upsert row(s)",
+      "type": "dataTable"
+    },
+    {
+      "label": "Send a text message",
+      "type": "telegram"
+    },
+    {
+      "label": "Tickers",
+      "type": "code"
+    },
+    {
+      "label": "Logic",
+      "type": "code"
+    },
+    {
+      "label": "Alert Check",
+      "type": "code"
+    },
+    {
+      "label": "Merge State",
+      "type": "code"
+    },
+    {
+      "label": "Market Status",
+      "type": "httpRequest"
+    },
+    {
+      "label": "Stock Quotes",
+      "type": "httpRequest"
+    },
+    {
+      "label": "Market Monitor",
+      "type": "scheduleTrigger"
+    },
+    {
+      "label": "Manual Trigger",
+      "type": "manualTrigger"
+    },
+    {
+      "label": "Market Data",
+      "type": "merge"
+    },
+    {
+      "label": "Yahoo CRWV Test",
+      "type": "httpRequest"
+    },
+    {
+      "label": "Yahoo CRWV Result",
+      "type": "code"
+    },
+    {
+      "label": "Parse Yahoo Data",
+      "type": "code"
+    },
+    {
+      "label": "Yahoo Indicators",
+      "type": "httpRequest"
+    },
+    {
+      "label": "Parse Indicators",
+      "type": "code"
+    },
+    {
+      "label": "Merge Market + Indicators",
+      "type": "merge"
+    },
+    {
+      "label": "Research Input",
+      "type": "code"
+    },
+    {
+      "label": "Parse Research",
+      "type": "code"
+    },
+    {
+      "label": "Perplexity Deep Research",
+      "type": "httpRequest"
+    },
+    {
+      "label": "Parse Research TEST",
+      "type": "code"
+    },
+    {
+      "label": "Perplexity Deep Research TEST",
+      "type": "httpRequest"
+    },
+    {
+      "label": "Analysis TEST",
+      "type": "code"
+    },
+    {
+      "label": "Perplexity Analysis TEST",
+      "type": "httpRequest"
+    },
+    {
+      "label": "Analysis",
+      "type": "code"
+    },
+    {
+      "label": "Perplexity Analysis",
+      "type": "httpRequest"
+    },
+    {
+      "label": "Parse Analysis TEST",
+      "type": "code"
+    },
+    {
+      "label": "Parse Analysis",
+      "type": "code"
+    },
+    {
+      "label": "Alert Check TEST",
+      "type": "code"
+    },
+    {
+      "label": "Alert Test Input",
+      "type": "code"
+    },
+    {
+      "label": "RSI 15M Data",
+      "type": "httpRequest"
+    },
+    {
+      "label": "Merge 15M Data",
+      "type": "code"
+    },
+    {
+      "label": "RSI 15M",
+      "type": "code"
+    },
+    {
+      "label": "Divergence",
+      "type": "code"
+    },
+    {
+      "label": "If true TEST",
+      "type": "code"
+    },
+    {
+      "label": "If TEST",
+      "type": "if"
+    },
+    {
+      "label": "Research Input TEST",
+      "type": "code"
+    },
+    {
+      "label": "Format Telegram Messages",
+      "type": "code"
+    },
+    {
+      "label": "DEBUG Trading Date",
+      "type": "code"
+    },
+    {
+      "label": "DEBUG Get Rows",
+      "type": "code"
+    },
+    {
+      "label": "IF – VALID DATE",
+      "type": "if"
+    },
+    {
+      "label": "TEST Alert Check Input",
+      "type": "code"
+    },
+    {
+      "label": "Send a text message TEST",
+      "type": "telegram"
+    },
+    {
+      "label": "Format Telegram Messages TEST",
+      "type": "code"
+    },
+    {
+      "label": "Loop Over Items",
+      "type": "splitInBatches"
+    },
+    {
+      "label": "Loop Over Items TEST",
+      "type": "splitInBatches"
+    },
+    {
+      "label": "Loop Over Items1",
+      "type": "splitInBatches"
+    }
+  ],
+  "connections": [
+    {
+      "from": "Get row(s)",
+      "to": "Merge State"
+    },
+    {
+      "from": "If",
+      "to": "Research Input"
+    },
+    {
+      "from": "Tickers",
+      "to": "Yahoo Indicators"
+    },
+    {
+      "from": "Tickers",
+      "to": "Stock Quotes"
+    },
+    {
+      "from": "Logic",
+      "to": "Get row(s)"
+    },
+    {
+      "from": "Alert Check",
+      "to": "IF – VALID DATE"
+    },
+    {
+      "from": "Merge State",
+      "to": "Alert Check"
+    },
+    {
+      "from": "Market Status",
+      "to": "Market Data"
+    },
+    {
+      "from": "Stock Quotes",
+      "to": "Parse Yahoo Data"
+    },
+    {
+      "from": "Upsert row(s)",
+      "to": "If"
+    },
+    {
+      "from": "Market Monitor",
+      "to": "Tickers"
+    },
+    {
+      "from": "Market Monitor",
+      "to": "Market Status"
+    },
+    {
+      "from": "Manual Trigger",
+      "to": "Market Status"
+    },
+    {
+      "from": "Manual Trigger",
+      "to": "Tickers"
+    },
+    {
+      "from": "Market Data",
+      "to": "Merge Market + Indicators"
+    },
+    {
+      "from": "Yahoo CRWV Test",
+      "to": "Yahoo CRWV Result"
+    },
+    {
+      "from": "Parse Yahoo Data",
+      "to": "Market Data"
+    },
+    {
+      "from": "Yahoo Indicators",
+      "to": "Parse Indicators"
+    },
+    {
+      "from": "Parse Indicators",
+      "to": "Merge Market + Indicators"
+    },
+    {
+      "from": "Merge Market + Indicators",
+      "to": "Logic"
+    },
+    {
+      "from": "Research Input",
+      "to": "Perplexity Deep Research"
+    },
+    {
+      "from": "Perplexity Deep Research",
+      "to": "Parse Research"
+    },
+    {
+      "from": "Perplexity Deep Research TEST",
+      "to": "Loop Over Items TEST"
+    },
+    {
+      "from": "Parse Research TEST",
+      "to": "Analysis TEST"
+    },
+    {
+      "from": "Analysis TEST",
+      "to": "Perplexity Analysis TEST"
+    },
+    {
+      "from": "Parse Research",
+      "to": "RSI 15M Data"
+    },
+    {
+      "from": "Analysis",
+      "to": "Perplexity Analysis"
+    },
+    {
+      "from": "Perplexity Analysis TEST",
+      "to": "Parse Analysis TEST"
+    },
+    {
+      "from": "Perplexity Analysis",
+      "to": "Parse Analysis"
+    },
+    {
+      "from": "Parse Analysis",
+      "to": "Format Telegram Messages"
+    },
+    {
+      "from": "Alert Test Input",
+      "to": "If true TEST"
+    },
+    {
+      "from": "RSI 15M Data",
+      "to": "Merge 15M Data"
+    },
+    {
+      "from": "Merge 15M Data",
+      "to": "RSI 15M"
+    },
+    {
+      "from": "RSI 15M",
+      "to": "Divergence"
+    },
+    {
+      "from": "Divergence",
+      "to": "Analysis"
+    },
+    {
+      "from": "If true TEST",
+      "to": "If TEST"
+    },
+    {
+      "from": "If TEST",
+      "to": "Research Input TEST"
+    },
+    {
+      "from": "Research Input TEST",
+      "to": "Loop Over Items TEST"
+    },
+    {
+      "from": "Format Telegram Messages",
+      "to": "Send a text message"
+    },
+    {
+      "from": "IF – VALID DATE",
+      "to": "Upsert row(s)"
+    },
+    {
+      "from": "TEST Alert Check Input",
+      "to": "Alert Check TEST"
+    },
+    {
+      "from": "Format Telegram Messages TEST",
+      "to": "Send a text message TEST"
+    },
+    {
+      "from": "Parse Analysis TEST",
+      "to": "Format Telegram Messages TEST"
+    },
+    {
+      "from": "Loop Over Items TEST",
+      "to": "Parse Research TEST"
+    },
+    {
+      "from": "Loop Over Items TEST",
+      "to": "Perplexity Deep Research TEST"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+.DS_Store
+.env
+.env.*
+*.secret
+credentials*
+*private*
+workflow-original*.json
